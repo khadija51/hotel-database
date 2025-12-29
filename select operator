@@ -122,15 +122,4 @@ SELECT * FROM HOTEL_BOOKING_RECORD;
 SELECT * 
 FROM HOTEL_BOOKING_RECORD
 WHERE Customer_Name = 'Ayesha Khan';
--- get all the services where tax =25
-SELECT *
-FROM HOTEL_BOOKING_RECORD
-WHERE Tax = 25;
--- project operator
--- show only customer_Name and servicces
-SELECT Customer_Name, Service
-FROM HOTEL_BOOKING_RECORD;
--- show only Roon_No, Room_Type ,Room_price
-SELECT Room_No, Room_Type, Room_Price
-FROM HOTEL_BOOKING_RECORD;
--- join operator
+
