@@ -1,0 +1,122 @@
+-- Creating a NEW database (unique name so no errors)
+CREATE DATABASE IF NOT EXISTS hotel_project_db;
+USE hotel_project_db;
+-- Dropping table if exists (to avoid duplicate errors)
+DROP TABLE IF EXISTS HOTEL_BOOKING_RECORD;
+ CREATE TABLE HOTEL_BOOKING_RECORD (
+    Booking_ID INT,
+    Booking_Date DATE,
+    Cust_ID INT,
+    Customer_Name VARCHAR(50),
+    Customer_Address VARCHAR(100),
+    Room_No INT,
+    Room_Type VARCHAR(20),
+    Room_Price INT,
+    Service_ID VARCHAR(10),
+    Service VARCHAR(30),
+    Service_Category VARCHAR(30),
+    Qty INT,
+    Price INT,
+    Service_Total INT,
+    Tax INT CHECK (Tax <= 30),
+    Discount INT CHECK (Discount <= 200),
+    Payment_ID VARCHAR(10),
+    Bill_Total INT
+);
+
+INSERT INTO HOTEL_BOOKING_RECORD VALUES
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S001','Breakfast','Food',3,500,1500,25,100,'P001',16325),
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S002','Laundry','Laundry',2,300,600,20,50,'P001',12270),
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S003','Dinner','Food',3,1200,3600,30,150,'P001',18630),
+
+(102,'2025-01-03',15,'Ali Raza','Gulshan, Karachi',305,'Double',7000,'S001','Breakfast','Food',2,600,1200,25,100,'P002',16025),
+(102,'2025-01-03',15,'Ali Raza','Gulshan, Karachi',305,'Double',7000,'S002','Laundry','Laundry',1,400,400,20,50,'P002',15170),
+
+(103,'2025-01-04',18,'Sana Ahmed','Johar Town, Lahore',410,'Deluxe',10000,'S004','Spa','Spa',1,2000,2000,30,200,'P003',12230),
+(103,'2025-01-04',18,'Sana Ahmed','Johar Town, Lahore',410,'Deluxe',10000,'S003','Dinner','Food',2,1500,3000,25,100,'P003',13725),
+
+(104,'2025-01-05',21,'Bilal Hussain','Saddar, Rawalpindi',112,'Single',4800,'S001','Breakfast','Food',2,500,1000,20,50,'P004',12350),
+(104,'2025-01-05',21,'Bilal Hussain','Saddar, Rawalpindi',112,'Single',4800,'S002','Laundry','Laundry',1,350,350,15,50,'P004',11965),
+
+(105,'2025-01-06',25,'Zara Malik','DHA, Lahore',520,'Suite',15000,'S004','Spa','Spa',1,3000,3000,30,200,'P005',18230),
+(105,'2025-01-06',25,'Zara Malik','DHA, Lahore',520,'Suite',15000,'S003','Dinner','Food',2,2000,4000,25,150,'P005',19250),
+
+(106,'2025-01-07',30,'Ahmed Ali','PECHS, Karachi',330,'Double',7200,'S001','Breakfast','Food',2,600,1200,25,100,'P006',14700),
+(106,'2025-01-07',30,'Ahmed Ali','PECHS, Karachi',330,'Double',7200,'S002','Laundry','Laundry',1,400,400,20,50,'P006',14270),
+
+(107,'2025-01-08',34,'Hira Noor','Satellite Town, Quetta',215,'Single',4600,'S001','Breakfast','Food',3,500,1500,25,100,'P007',11975),
+(107,'2025-01-08',34,'Hira Noor','Satellite Town, Quetta',215,'Single',4600,'S003','Dinner','Food',2,1200,2400,20,100,'P007',12820),
+
+(108,'2025-01-09',38,'Usman Farooq','University Road, Peshawar',610,'Suite',15500,'S004','Spa','Spa',1,3000,3000,30,200,'P008',19170),
+(108,'2025-01-09',38,'Usman Farooq','University Road, Peshawar',610,'Suite',15500,'S003','Dinner','Food',2,2000,4000,25,150,'P008',20125),
+
+(109,'2025-01-10',40,'Nadia Khan','Cantt, Multan',118,'Single',4800,'S001','Breakfast','Food',2,500,1000,20,50,'P009',12170),
+
+(110,'2025-01-11',45,'Faisal Iqbal','Blue Area, Islamabad',402,'Deluxe',9800,'S003','Dinner','Food',2,1500,3000,25,100,'P010',13325),
+(110,'2025-01-11',45,'Faisal Iqbal','Blue Area, Islamabad',402,'Deluxe',9800,'S004','Spa','Spa',1,2500,2500,20,150,'P010',12770);
+ -- Creating a NEW database (unique name so no errors)
+CREATE DATABASE IF NOT EXISTS hotel_project_db;
+USE hotel_project_db;
+
+-- Dropping table if exists (to avoid duplicate errors)
+DROP TABLE IF EXISTS HOTEL_BOOKING_RECORD;
+
+-- Creating the table
+CREATE TABLE HOTEL_BOOKING_RECORD (
+    Booking_ID INT,
+    Booking_Date DATE,
+    Cust_ID INT,
+    Customer_Name VARCHAR(50),
+    Customer_Address VARCHAR(100),
+    Room_No INT,
+    Room_Type VARCHAR(20),
+    Room_Price INT,
+    Service_ID VARCHAR(10),
+    Service VARCHAR(30),
+    Service_Category VARCHAR(30),
+    Qty INT,
+    Price INT,
+    Service_Total INT,
+    Tax INT CHECK (Tax <= 30),
+    Discount INT CHECK (Discount <= 200),
+    Payment_ID VARCHAR(10),
+    Bill_Total INT
+);
+
+-- Inserting 20 entries
+INSERT INTO HOTEL_BOOKING_RECORD VALUES
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S001','Breakfast','Food',3,500,1500,25,100,'P001',16325),
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S002','Laundry','Laundry',2,300,600,20,50,'P001',12270),
+(101,'2025-01-02',12,'Ayesha Khan','Model Town, Lahore',201,'Single',4500,'S003','Dinner','Food',3,1200,3600,30,150,'P001',18630),
+
+(102,'2025-01-03',15,'Ali Raza','Gulshan, Karachi',305,'Double',7000,'S001','Breakfast','Food',2,600,1200,25,100,'P002',16025),
+(102,'2025-01-03',15,'Ali Raza','Gulshan, Karachi',305,'Double',7000,'S002','Laundry','Laundry',1,400,400,20,50,'P002',15170),
+
+(103,'2025-01-04',18,'Sana Ahmed','Johar Town, Lahore',410,'Deluxe',10000,'S004','Spa','Spa',1,2000,2000,30,200,'P003',12230),
+(103,'2025-01-04',18,'Sana Ahmed','Johar Town, Lahore',410,'Deluxe',10000,'S003','Dinner','Food',2,1500,3000,25,100,'P003',13725),
+
+(104,'2025-01-05',21,'Bilal Hussain','Saddar, Rawalpindi',112,'Single',4800,'S001','Breakfast','Food',2,500,1000,20,50,'P004',12350),
+(104,'2025-01-05',21,'Bilal Hussain','Saddar, Rawalpindi',112,'Single',4800,'S002','Laundry','Laundry',1,350,350,15,50,'P004',11965),
+
+(105,'2025-01-06',25,'Zara Malik','DHA, Lahore',520,'Suite',15000,'S004','Spa','Spa',1,3000,3000,30,200,'P005',18230),
+(105,'2025-01-06',25,'Zara Malik','DHA, Lahore',520,'Suite',15000,'S003','Dinner','Food',2,2000,4000,25,150,'P005',19250),
+
+(106,'2025-01-07',30,'Ahmed Ali','PECHS, Karachi',330,'Double',7200,'S001','Breakfast','Food',2,600,1200,25,100,'P006',14700),
+(106,'2025-01-07',30,'Ahmed Ali','PECHS, Karachi',330,'Double',7200,'S002','Laundry','Laundry',1,400,400,20,50,'P006',14270),
+
+(107,'2025-01-08',34,'Hira Noor','Satellite Town, Quetta',215,'Single',4600,'S001','Breakfast','Food',3,500,1500,25,100,'P007',11975),
+(107,'2025-01-08',34,'Hira Noor','Satellite Town, Quetta',215,'Single',4600,'S003','Dinner','Food',2,1200,2400,20,100,'P007',12820),
+
+(108,'2025-01-09',38,'Usman Farooq','University Road, Peshawar',610,'Suite',15500,'S004','Spa','Spa',1,3000,3000,30,200,'P008',19170),
+(108,'2025-01-09',38,'Usman Farooq','University Road, Peshawar',610,'Suite',15500,'S003','Dinner','Food',2,2000,4000,25,150,'P008',20125),
+
+(109,'2025-01-10',40,'Nadia Khan','Cantt, Multan',118,'Single',4800,'S001','Breakfast','Food',2,500,1000,20,50,'P009',12170),
+
+(110,'2025-01-11',45,'Faisal Iqbal','Blue Area, Islamabad',402,'Deluxe',9800,'S003','Dinner','Food',2,1500,3000,25,100,'P010',13325),
+(110,'2025-01-11',45,'Faisal Iqbal','Blue Area, Islamabad',402,'Deluxe',9800,'S004','Spa','Spa',1,2500,2500,20,150,'P010',12770);
+
+-- project operator
+-- show only customer_Name and services
+SELECT *
+FROM HOTEL_BOOKING_RECORD
+WHERE Tax = 25;
