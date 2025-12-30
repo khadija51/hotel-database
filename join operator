@@ -132,7 +132,7 @@ P002       | Card
 P003       | Online
 P004       | Cash
 -- join Hotel_Booking_Record with PAyment on payment_ID
-SELECT H Customer_Name, H.Room_No, C.City
+SELECT H.Customer_Name, H.Service, P.Method
 FROM HOTEL_BOOKING_RECORD H
 JOIN PAYMENT P
-ON H.payment_ID;
+ON H.Payment_ID = P.Payment_ID;
